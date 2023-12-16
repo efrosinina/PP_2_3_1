@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Обновление данных пользователя</h1>
-<form th:method="POST" th:action="@{/users/edit}"  th:object="${user}">
+<form th:method="POST" th:action="@{/edit}"  th:object="${user}">
     <p><label for="name">Введите имя: </label>
         <input type="text" th:field="*{name}" id="name"/></p>
     <p><label for="name">Введите фамилию: </label>

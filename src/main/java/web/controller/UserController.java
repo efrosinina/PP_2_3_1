@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import web.model.User;
 import web.service.UserService;
 @Controller
-@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -33,7 +32,7 @@ public class UserController {
     @PostMapping()
     public String createUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
-        return "redirect:/users";
+        return "redirect:/";
     }
 
     @GetMapping("/edit")
@@ -45,12 +44,12 @@ public class UserController {
     @PostMapping("/edit")
     public String updateUser(User user) {
         userService.updateUser(user);
-        return "redirect:/users";
+        return "redirect:/";
     }
 
     @PostMapping("/delete")
     public String deleteUser(@RequestParam("id") Long id) {
         userService.deleteUser(id);
-        return "redirect:/users";
+        return "redirect:/";
     }
 }
