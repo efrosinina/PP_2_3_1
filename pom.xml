@@ -118,6 +118,6 @@
         </configuration>
       </plugin>
     </plugins>
-  <finalName>PP_2_3_1</finalName>
-</build>
+    <finalName>PP_2_3_1</finalName>
+  </build>
 </project>
